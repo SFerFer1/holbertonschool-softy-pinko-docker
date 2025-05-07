@@ -6,16 +6,16 @@ services:
       context: ./front-end
       dockerfile: Dockerfile
     image: front
-    ports:
-      - "9000:9000"
+    expose:
+      - "9000"
 
   backend:
     build:
       context: ./back-end
       dockerfile: Dockerfile
     image: back
-    ports:
-      - "5252:5252"
+    expose:
+      - "5252"
 
   proxy:
     build:
